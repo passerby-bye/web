@@ -1,0 +1,157 @@
+/* 月亮的样式 */ 
+body{
+    background-color:black;
+    margin: 0;
+}
+.scene{
+    width: 100%;
+}
+.box{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    flex-direction: column;
+}
+.moon { 
+    width: 600px; 
+    height: 600px; 
+    border-radius: 50%; 
+    background: linear-gradient(145deg, #f5f985 15%, #fbcc21 70%, #deb618 100%);
+    box-shadow: 0 0 20px 8px rgba(249, 218, 59, 0.2); 
+    /*display: flex;*/
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    flex-direction: column;
+ } 
+
+
+
+.wave{
+        /*画一条波浪线*/
+        width: 10px;
+        height: 100px;
+        background-size: 20px 20px;
+        background-repeat: repeat-y;
+        background-image: linear-gradient(135deg,transparent 45%,black 55%,transparent 60%),
+                             linear-gradient(45deg,transparent 45%,black 55%,transparent 60%);
+        
+    }
+
+
+ .mask2{
+    height: 300px;
+    overflow: hidden;
+    }
+
+.tree{
+  position: relative;
+    height: 10em;
+    width: 10em;
+    z-index: 1;
+    content: url(tree.png);
+}
+
+.text{
+   color: aliceblue;
+}
+.blinkstar {
+  width: 2px;
+  height: 2px;
+  background-color: white; /* 星星的颜色 */
+  position: absolute;
+  border-radius: 50%; /* 使元素呈圆形，实现星星效果 */
+  animation: blink 3s infinite alternate; /* 使用 CSS 动画制作闪烁效果 */
+}
+
+@keyframes blink {
+  0% {
+      opacity: 1;
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1.2);
+  }
+}
+ 
+
+  
+  @keyframes circle {
+    to {
+      transform: rotate(360deg);
+    }
+    from {
+      transform: rotate(0);
+    }
+  }
+  
+  
+  .star {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    content: url(mooncake.png);
+    animation: star-fall 3s linear forwards;
+    z-index: 1;
+  }
+
+  @keyframes star-fall {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(1000px);
+      opacity: 0;
+    }
+  }
+
+.end{
+  width: 100%;
+  height: 100%; 
+
+}
+.glass{
+  width: 100%;
+  background-color:blanchedalmond;
+  box-shadow:0 0 40px #FFFFFF;
+  position: absolute;
+  text-align: center;
+
+}
+
+#end-content {
+  display: none;
+}
+
+
+.text2 {
+  position: absolute;
+  top: 300px;
+  height: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 0 5px white;
+  animation: animate 3s linear forwards;
+}
+
+
+@keyframes animate {
+  0% {
+    transform: translateX(0);
+  }
+
+  70% {
+    transform: translateY(500px);
+  }
+
+  100% {
+    transform: translateY(700px);
+  }
+}
+
